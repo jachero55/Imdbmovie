@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rajdhani", sans-serif;
+    position: relative;
+    padding-bottom: 470px;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.86);
+}
+
+p {
+    color: #555;
+    line-height: 1.5rem;
+}
+
+img {
+    width: 100%;
+}
