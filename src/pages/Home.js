@@ -57,6 +57,7 @@ const Home = () => {
                     <MovieList />
                 </Container>
             </Main>
+            <Footer />
         </>
     )
 }

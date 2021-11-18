@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
-import Modal from '../modal/MovieModal'
 
 const image_url = 'https://image.tmdb.org/t/p/w200';
 const Container = styled.div`
@@ -63,14 +62,6 @@ const MovieReleaseDate = styled.h5`
 `
 
 const Movies = ({ id, image, language, title, overview, popularity, release_date, vote_count }) => {
-    // Create state for the selected movie
-    const [selectedMovie, setSelectedMovie] = useState(null)
-    // state for opening the modal
-    const [openModal, setOpenModal] = useState(false)
-    const openMovieModal = () => {
-        // Function to open the modal. SetOpenModal to true when button is clicked
-        setOpenModal(true)
-    }
     let navigate = useNavigate();
     const handleCardClick = () => {
         navigate("/movie");

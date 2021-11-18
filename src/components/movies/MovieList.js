@@ -11,6 +11,7 @@ const Title = styled.h2`
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
+    color: #f2f2f2;
 `
 const MoviesContainer = styled.div`
     display: flex;
