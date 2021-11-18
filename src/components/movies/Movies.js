@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import Modal from '../modal/MovieModal'
 
@@ -62,15 +63,21 @@ const MovieReleaseDate = styled.h5`
 `
 
 const Movies = ({ id, image, language, title, overview, popularity, release_date, vote_count }) => {
+    // Create state for the selected movie
+    const [selectedMovie, setSelectedMovie] = useState(null)
     // state for opening the modal
     const [openModal, setOpenModal] = useState(false)
     const openMovieModal = () => {
         // Function to open the modal. SetOpenModal to true when button is clicked
         setOpenModal(true)
     }
+    let navigate = useNavigate();
+    const handleCardClick = () => {
+        navigate("/movie");
+    }
     return (
         <Container>
-            <Card onClick={openMovieModal}>
+            <Card onClick={handleCardClick}>
                 <ImageContainer>
                     <Image src={image ? `${image_url}${image}` : `https://images.pexels.com/photos/3601453/pexels-photo-3601453.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500`} alt={`${title} Poster`} />
                 </ImageContainer>
@@ -79,9 +86,6 @@ const Movies = ({ id, image, language, title, overview, popularity, release_date
                     <MovieReleaseDate>{release_date}</MovieReleaseDate>
                 </MovieDetails>
             </Card>
-            {/**Use conditional to check if modal is open. We use curly brace in react for conditional */}
-            {/**The modal take in the prop closeModal which we assign setModal */}
-            {openModal && <Modal closeModal={setOpenModal} />}
         </Container>
     )
 }

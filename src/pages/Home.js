@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Footer from '../components/footer/Footer'
 import Form from '../components/form/Form'
 import MovieList from '../components/movies/MovieList'
-import MovieModal from '../components/modal/MovieModal'
 
 const Main = styled.main`
     margin: 0 auto;
@@ -58,7 +57,6 @@ const Home = () => {
                     <MovieList />
                 </Container>
             </Main>
-            <Footer />
         </>
     )
 }

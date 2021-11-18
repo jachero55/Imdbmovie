@@ -59,13 +59,13 @@ const Text = styled.p`
 `
 // Pass the prop to modal so that we track the state of modal is open in the movies component
 // Then create a function and click event to the close modal button
-const MovieModal = ({ closeModal }) => {
+const MovieModal = ({ closeModal, selectedImage, setSelectedImage }) => {
     return (
         <Overlay>
             <Container>
                 <Button onClick={() => { closeModal(false) }}>{<FaTimes />}</Button>
                 <ImageContainer>
-                    <Image src="https://images.pexels.com/photos/6633/car-superhero-symbol-batman.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Movie" />
+                    <Image src="https://images.pexels.com/photos/7672276/pexels-photo-7672276.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Movie" />
                 </ImageContainer>
                 <Details>
                     <Title>Things Fall Apart</Title>

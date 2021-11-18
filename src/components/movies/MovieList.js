@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Loading from '../loading/Loading'
 import { useGlobalContext } from '../../context/Context'
-import Movie from '../movies/Movies'
+import Movie from './Movies'
 
 const Container = styled.div`
 
