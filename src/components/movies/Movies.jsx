@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import Modal from '../modal/MovieModal'
 
 const image_url = 'https://image.tmdb.org/t/p/w200';
 const Container = styled.div`
@@ -16,7 +17,7 @@ const Image = styled.img`
     height: 400px;
     object-fit: cover;
     border-radius: .3rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 `
 const MovieDetails = styled.div`
     padding: .7rem;
@@ -35,6 +36,7 @@ const MovieDetails = styled.div`
     transition: all 0.5s ease;
 `
 const Card = styled.div`
+border: .2px solid #ffffff;
 border-radius: .3rem;
 cursor: pointer;
 transition: all 0.5s ease;
@@ -63,7 +65,8 @@ const Movies = ({ id, image, language, title, overview, popularity, release_date
     // state for opening the modal
     const [openModal, setOpenModal] = useState(false)
     const openMovieModal = () => {
-
+        // Function to open the modal. SetOpenModal to true when button is clicked
+        setOpenModal(true)
     }
     return (
         <Container>
@@ -76,6 +79,9 @@ const Movies = ({ id, image, language, title, overview, popularity, release_date
                     <MovieReleaseDate>{release_date}</MovieReleaseDate>
                 </MovieDetails>
             </Card>
+            {/**Use conditional to check if modal is open. We use curly brace in react for conditional */}
+            {/**The modal take in the prop closeModal which we assign setModal */}
+            {openModal && <Modal closeModal={setOpenModal} />}
         </Container>
     )
 }

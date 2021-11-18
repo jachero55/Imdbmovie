@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { FaTimes } from 'react-icons/fa'
 
@@ -15,7 +15,7 @@ const Overlay = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    
 `
 const Container = styled.div`
     width: 40%;
@@ -57,12 +57,13 @@ const Title = styled.h1`
 const Text = styled.p`
 
 `
-
-const MovieModal = () => {
+// Pass the prop to modal so that we track the state of modal is open in the movies component
+// Then create a function and click event to the close modal button
+const MovieModal = ({ closeModal }) => {
     return (
         <Overlay>
             <Container>
-                <Button>{<FaTimes />}</Button>
+                <Button onClick={() => { closeModal(false) }}>{<FaTimes />}</Button>
                 <ImageContainer>
                     <Image src="https://images.pexels.com/photos/6633/car-superhero-symbol-batman.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Movie" />
                 </ImageContainer>

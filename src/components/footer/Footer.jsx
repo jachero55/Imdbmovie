@@ -23,6 +23,8 @@ const InnerFooterContainer = styled.div`
 `
 const Title = styled.h3`
     color: #f2f2f2;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
 `
 const TitleFour = styled.h4`
 margin-bottom: 1rem;
@@ -42,13 +44,13 @@ const InnerMiddleContainer = styled.div`
     gap: 2rem;
 `
 const FooterAbout = styled.div`
-    
+    flex: 3;
 `
 const Text = styled.p`
 
 `
 const Contact = styled.div`
-
+    flex: 3;
 `
 const ContactDetails = styled.p`
 
@@ -58,7 +60,7 @@ const ContactSpan = styled.span`
     color: #fff;
 `
 const LatestMovies = styled.div`
-
+    flex: 2;
 `
 const FooterCopyRight = styled.div`
     background-color: #f2f2f2;
@@ -94,15 +96,15 @@ const Footer = () => {
                     </Contact>
                     <LatestMovies>
                         <TitleFour>Latest Movies</TitleFour>
-                        <ContactDetails>4205 Long key Lane 3205</ContactDetails>
-                        <ContactDetails>johnkennedy1868@yahoo.com</ContactDetails>
-                        <ContactDetails>+1 (515) - 400 - 40000</ContactDetails>
+                        <ContactDetails>Open House</ContactDetails>
+                        <ContactDetails>Godzilla</ContactDetails>
+                        <ContactDetails>Water Fall</ContactDetails>
                     </LatestMovies>
                     <LatestMovies>
                         <TitleFour>Helpful Links</TitleFour>
-                        <ContactDetails>4205 Long key Lane 3205</ContactDetails>
-                        <ContactDetails>johnkennedy1868@yahoo.com</ContactDetails>
-                        <ContactDetails>+1 (515) - 400 - 40000</ContactDetails>
+                        <ContactDetails>Our Partners</ContactDetails>
+                        <ContactDetails>Companies</ContactDetails>
+                        <ContactDetails>Related Movies</ContactDetails>
                     </LatestMovies>
                 </InnerMiddleContainer>
             </FooterMiddle>
