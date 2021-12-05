@@ -43,7 +43,11 @@ const Button = styled.button`
     border: none;
     font-size: 1.7rem;
     display: block;
-    margin: auto;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     border: 1px solid #C44900;
     padding: .3rem 1rem;
     color: #fff;
